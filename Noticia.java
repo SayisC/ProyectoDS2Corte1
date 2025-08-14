@@ -22,7 +22,6 @@ public class Noticias extends Publicacion {
 	public Noticias(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
 			boolean estaDisponible) {
 		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getLugarDePublicacion() {
