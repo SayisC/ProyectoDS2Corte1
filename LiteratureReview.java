@@ -30,7 +30,5 @@ public class LiteratureReview extends Publicacion{
 
 	public void setEsReferenciado(boolean esReferenciado) {
 		this.esReferenciado = esReferenciado;
-	}
-	
-	
+	}	
 }
