@@ -1,1 +1,76 @@
+package co.edu.unbosque.Model;
 
+public class DocumentoPrimario extends Publicacion {
+	
+	private String estadoConservacion;
+	private String origen;
+	
+	
+	
+	
+	public DocumentoPrimario() {
+		super();
+	}
+	
+	
+
+	public DocumentoPrimario(String estadoConservacion, String origen) {
+		super();
+		this.estadoConservacion = estadoConservacion;
+		this.origen = origen;
+	}
+	
+	
+
+	public DocumentoPrimario(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible, String estadoConservacion, String origen) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
+		this.estadoConservacion = estadoConservacion;
+		this.origen = origen;
+	}
+	
+	
+
+	public DocumentoPrimario(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	public String getEstadoConservacion() {
+		return estadoConservacion;
+	}
+
+	public void setEstadoConservacion(String estadoConservacion) {
+		this.estadoConservacion = estadoConservacion;
+	}
+
+	public String getOrigen() {
+		return origen;
+	}
+
+	public void setOrigen(String origen) {
+		this.origen = origen;
+	}
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return super.toString() + "DocumentoPrimario [estadoConservacion=" + estadoConservacion + ", origen=" + origen + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
