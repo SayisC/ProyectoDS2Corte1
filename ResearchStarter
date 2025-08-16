@@ -12,6 +12,14 @@ public class ResearchStarters extends Publicacion {
 			boolean estaDisponible) {
 		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
 	}
+
+	@Override
+	public String toString() {
+		return "ResearchStarters [getTitulo()=" + getTitulo() + ", getAutor()=" + getAutor() + ", getFormato()="
+				+ getFormato() + ", getIdioma()=" + getIdioma() + ", getFechaPublicacion()=" + getFechaPublicacion()
+				+ ", isEstaDisponible()=" + isEstaDisponible() + ", toString()=" + super.toString() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + "]";
+	}
 	
 	
 	
