@@ -1,1 +1,21 @@
+package co.edu.unbosque.Model;
 
+public class ResearchStarters extends Publicacion {
+
+	
+	
+	public ResearchStarters() {
+		super();
+	}
+
+	public ResearchStarters(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
+	}
+	
+	
+	
+	
+	
+	
+}
