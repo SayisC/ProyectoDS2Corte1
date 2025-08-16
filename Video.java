@@ -14,16 +14,17 @@ public class Video extends Publicacion {
 		this.duracion = duracion;
 		this.tieneSubtitulos = tieneSubtitulos;
 	}
-
-	public Video(String titulo, String autor, String formato, String idioma, int fechaDePublicacion, String duracion,
-			boolean tieneSubtitulos) {
-		super(titulo, autor, formato, idioma, fechaDePublicacion);
+	
+	public Video(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible, String duracion, boolean tieneSubtitulos) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
 		this.duracion = duracion;
 		this.tieneSubtitulos = tieneSubtitulos;
 	}
 
-	public Video(String titulo, String autor, String formato, String idioma, int fechaDePublicacion) {
-		super(titulo, autor, formato, idioma, fechaDePublicacion);
+	public Video(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -43,5 +44,11 @@ public class Video extends Publicacion {
 		this.tieneSubtitulos = tieneSubtitulos;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + " Cuanto dura el video? = " + duracion + ", Tiene subtitulos? = " + tieneSubtitulos + "]";
+	}
+
+	
 }
 
