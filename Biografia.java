@@ -13,14 +13,15 @@ public class Biografia extends Publicacion {
 		this.esAutobiografia = esAutobiografia;
 	}
 
-	public Biografia(String titulo, String autor, String formato, String idioma, int fechaDePublicacion,
-			boolean esAutobiografia) {
-		super(titulo, autor, formato, idioma, fechaDePublicacion);
+	public Biografia(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible, boolean esAutobiografia) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
 		this.esAutobiografia = esAutobiografia;
 	}
 
-	public Biografia(String titulo, String autor, String formato, String idioma, int fechaDePublicacion) {
-		super(titulo, autor, formato, idioma, fechaDePublicacion);
+	public Biografia(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -31,4 +32,10 @@ public class Biografia extends Publicacion {
 	public void setEsAutobiografia(boolean esAutobiografia) {
 		this.esAutobiografia = esAutobiografia;
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "Es una autobiografía? = " + esAutobiografia + "]";
+	}
 }
+
