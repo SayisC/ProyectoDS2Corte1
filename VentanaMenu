@@ -1,0 +1,81 @@
+package co.edu.unbosque.view;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class VentanaMenu extends JFrame {
+
+	private JLabel fondoMenu;
+	private JButton fisico;
+	private JButton digital;
+
+	public VentanaMenu() {
+		inicializarComponentes();
+	}
+
+	public void inicializarComponentes() {
+
+		this.setBounds(10, 10, 1280, 720);
+		this.setTitle("Menu");
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(null);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		
+		ImageIcon fondo = new ImageIcon("src/co/edu/unbosque/view/MenuBiblioteca.PNG");
+		Image escalar = fondo.getImage().getScaledInstance(1280, 720, Image.SCALE_SMOOTH);
+		fondoMenu = new JLabel(new ImageIcon(escalar));
+		fondoMenu.setBounds(0, 0, 1280, 720);
+		this.add(fondoMenu);
+
+		fisico = new JButton("Formato Físico");
+		fisico.setFont(new Font("Nunito", Font.BOLD, 20));
+		fisico.setBounds(150, 172, 200, 40);
+		fisico.setBackground(new Color(251, 197, 101));
+		fisico.setForeground(Color.WHITE);
+		fisico.setFocusPainted(false);
+		fondoMenu.add(fisico);
+
+		digital = new JButton("Formato Digital");
+		digital.setFont(new Font("Nunito", Font.BOLD, 20));
+		digital.setBounds(150, 510, 200, 40);
+		digital.setBackground(new Color(251, 197, 101));
+		digital.setForeground(Color.WHITE);
+		digital.setFocusPainted(false);
+		fondoMenu.add(digital);
+
+	}
+
+	public JLabel getFondoMenu() {
+		return fondoMenu;
+	}
+
+	public void setFondoMenu(JLabel fondoMenu) {
+		this.fondoMenu = fondoMenu;
+	}
+
+	public JButton getFisico() {
+		return fisico;
+	}
+
+	public void setFisico(JButton fisico) {
+		this.fisico = fisico;
+	}
+
+	public JButton getDigital() {
+		return digital;
+	}
+
+	public void setDigital(JButton digital) {
+		this.digital = digital;
+	}
+
+}
