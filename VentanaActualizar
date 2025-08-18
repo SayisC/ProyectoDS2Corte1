@@ -1,0 +1,285 @@
+package co.edu.unbosque.view;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class VentanaActualizar extends JFrame {
+	
+	private JTextField txtTitulo;
+	private JTextField txtAutor;
+	private JTextField txtFormato;
+	private JTextField txtIdioma;
+	private JTextField txtFechaPubliacion;
+	private JComboBox<String> cbEstaDisponible;
+
+	private JButton volver;
+	private JButton confirmar;
+
+	private JLabel fondoActualizar;
+
+	private JLabel lblTitulo;
+	private JLabel lblAutor;
+	private JLabel lblFormato;
+	private JLabel lblIdioma;
+	private JLabel lblFechaPublicacion;
+	private JLabel lblEstaDisponible;
+
+	public VentanaActualizar() {
+		inicializarComponentes();
+	}
+
+	public void inicializarComponentes() {
+		this.setTitle("Actualizar");
+		this.setBounds(10, 10, 1280, 720);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(null);
+		this.getContentPane().setBackground(new Color(245, 245, 245));
+		this.setResizable(false);
+
+		ImageIcon fondo = new ImageIcon("src/co/edu/unbosque/view/VentanaActualizar.PNG");
+		Image escalar = fondo.getImage().getScaledInstance(1280, 720, Image.SCALE_SMOOTH);
+		fondoActualizar = new JLabel(new ImageIcon(escalar));
+		fondoActualizar.setBounds(0, 0, 1280, 720);
+		this.add(fondoActualizar);
+
+		Font fontLabel = new Font("Berton", Font.PLAIN, 14);
+		Font fontField = new Font("Segoe UI", Font.PLAIN, 14);
+
+		lblTitulo = new JLabel("Titulo : ");
+		lblTitulo.setFont(new Font("Segoe UI", Font.BOLD, 20));
+		lblTitulo.setBounds(110, 155, 250, 30);
+		lblTitulo.setForeground(new Color(255, 255, 255));
+		this.add(lblTitulo);
+		fondoActualizar.add(lblTitulo);
+
+		txtTitulo = new JTextField();
+		txtTitulo.setFont(fontField);
+		txtTitulo.setBounds(250, 155, 250, 30);
+		this.add(txtTitulo);
+		fondoActualizar.add(txtTitulo);
+
+		lblAutor = new JLabel("Autor : ");
+		lblAutor.setFont(new Font("Segoe UI", Font.BOLD, 20));
+		lblAutor.setBounds(110, 230, 250, 30);
+		lblAutor.setForeground(new Color(255, 255, 255));
+		this.add(lblAutor);
+		fondoActualizar.add(lblAutor);
+
+		txtAutor = new JTextField();
+		txtAutor.setFont(fontField);
+		txtAutor.setBounds(250, 230, 250, 30);
+		this.add(txtAutor);
+		fondoActualizar.add(txtAutor);
+
+		lblFormato = new JLabel("Formato : ");
+		lblFormato.setFont(new Font("Segoe UI", Font.BOLD, 20));
+		lblFormato.setBounds(110, 300, 250, 30);
+		lblFormato.setForeground(new Color(255, 255, 255));
+		this.add(lblFormato);
+		fondoActualizar.add(lblFormato);
+
+		txtFormato = new JTextField();
+		txtFormato.setFont(fontField);
+		txtFormato.setBounds(250, 300, 250, 30);
+		this.add(txtFormato);
+		fondoActualizar.add(txtFormato);
+
+		lblIdioma = new JLabel("Idioma : ");
+		lblIdioma.setFont(new Font("Segoe UI", Font.BOLD, 20));
+		lblIdioma.setBounds(110, 370, 250, 30);
+		lblIdioma.setForeground(new Color(255, 255, 255));
+		this.add(lblIdioma);
+		fondoActualizar.add(lblIdioma);
+
+		txtIdioma = new JTextField();
+		txtIdioma.setFont(fontField);
+		txtIdioma.setBounds(250, 370, 250, 30);
+		this.add(txtIdioma);
+		fondoActualizar.add(txtIdioma);
+		
+		lblFechaPublicacion = new JLabel("Fecha de publicación : ");
+		lblFechaPublicacion.setFont(new Font("Segoe UI", Font.BOLD, 20));
+		lblFechaPublicacion.setBounds(110, 440, 250, 30);
+		lblFechaPublicacion.setForeground(new Color(255, 255, 255));
+		this.add(lblFechaPublicacion);
+		fondoActualizar.add(lblFechaPublicacion);
+
+		txtFechaPubliacion = new JTextField();
+		txtFechaPubliacion.setFont(fontField);
+		txtFechaPubliacion.setBounds(335, 440, 230, 30);
+		this.add(txtFechaPubliacion);
+		fondoActualizar.add(txtFechaPubliacion);
+
+		lblEstaDisponible = new JLabel("Está Disponible : ");
+		lblEstaDisponible.setFont(new Font("Segoe UI", Font.BOLD, 20));
+		lblEstaDisponible.setBounds(110, 510, 250, 30);
+		lblEstaDisponible.setForeground(new Color(255, 255, 255));
+		this.add(lblEstaDisponible);
+		fondoActualizar.add(lblEstaDisponible);
+
+		cbEstaDisponible = new JComboBox<>(new String[] { "Seleccione: ", "Sí está disponible", "No está disponible" });
+		cbEstaDisponible.setFont(fontField);
+		cbEstaDisponible.setBounds(275, 510, 200, 30);
+		this.add(cbEstaDisponible);
+		fondoActualizar.add(cbEstaDisponible);
+
+		volver = new JButton("Volver");
+		volver.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		volver.setBounds(10, 630, 150, 40);
+		volver.setBackground(new Color(173, 173, 173));
+		volver.setForeground(Color.WHITE);
+		volver.setFocusPainted(false);
+		fondoActualizar.add(volver);
+
+		confirmar = new JButton("Actualizar");
+		confirmar.setFont(new Font("Segoe UI", Font.BOLD, 30));
+		confirmar.setBounds(800, 565, 200, 70);
+		confirmar.setBackground(new Color(60, 175, 71));
+		confirmar.setForeground(Color.WHITE);
+		confirmar.setFocusPainted(false);
+		fondoActualizar.add(confirmar);
+
+	}
+
+	public JTextField getTxtTitulo() {
+		return txtTitulo;
+	}
+
+	public void setTxtTitulo(JTextField txtTitulo) {
+		this.txtTitulo = txtTitulo;
+	}
+
+	public JTextField getTxtAutor() {
+		return txtAutor;
+	}
+
+	public void setTxtAutor(JTextField txtAutor) {
+		this.txtAutor = txtAutor;
+	}
+
+	public JTextField getTxtFormato() {
+		return txtFormato;
+	}
+
+	public void setTxtFormato(JTextField txtFormato) {
+		this.txtFormato = txtFormato;
+	}
+
+	public JTextField getTxtIdioma() {
+		return txtIdioma;
+	}
+
+	public void setTxtIdioma(JTextField txtIdioma) {
+		this.txtIdioma = txtIdioma;
+	}
+
+	public JTextField getTxtFechaPubliacion() {
+		return txtFechaPubliacion;
+	}
+
+	public void setTxtFechaPubliacion(JTextField txtFechaPubliacion) {
+		this.txtFechaPubliacion = txtFechaPubliacion;
+	}
+
+	public JComboBox<String> getCbEstaDisponible() {
+		return cbEstaDisponible;
+	}
+
+	public void setCbEstaDisponible(JComboBox<String> cbEstaDisponible) {
+		this.cbEstaDisponible = cbEstaDisponible;
+	}
+
+	public JButton getVolver() {
+		return volver;
+	}
+
+	public void setVolver(JButton volver) {
+		this.volver = volver;
+	}
+
+	public JButton getConfirmar() {
+		return confirmar;
+	}
+
+	public void setConfirmar(JButton confirmar) {
+		this.confirmar = confirmar;
+	}
+
+	public JLabel getFondoActualizar() {
+		return fondoActualizar;
+	}
+
+	public void setFondoCrear(JLabel fondoActualizar) {
+		this.fondoActualizar = fondoActualizar;
+	}
+
+	public JLabel getLblTitulo() {
+		return lblTitulo;
+	}
+
+	public void setLblTitulo(JLabel lblTitulo) {
+		this.lblTitulo = lblTitulo;
+	}
+
+	public JLabel getLblAutor() {
+		return lblAutor;
+	}
+
+	public void setLblAutor(JLabel lblAutor) {
+		this.lblAutor = lblAutor;
+	}
+
+	public JLabel getLblFormato() {
+		return lblFormato;
+	}
+
+	public void setLblFormato(JLabel lblFormato) {
+		this.lblFormato = lblFormato;
+	}
+
+	public JLabel getLblIdioma() {
+		return lblIdioma;
+	}
+
+	public void setLblIdioma(JLabel lblIdioma) {
+		this.lblIdioma = lblIdioma;
+	}
+
+	public JLabel getLblFechaPublicacion() {
+		return lblFechaPublicacion;
+	}
+
+	public void setLblFechaPublicacion(JLabel lblFechaPublicacion) {
+		this.lblFechaPublicacion = lblFechaPublicacion;
+	}
+
+	public JLabel getLblEstaDisponible() {
+		return lblEstaDisponible;
+	}
+
+	public void setLblEstaDisponible(JLabel lblEstaDisponible) {
+		this.lblEstaDisponible = lblEstaDisponible;
+	}
+
+	public void limpiarCampos() {
+		txtTitulo.setText("");
+		txtAutor.setText("");
+		txtFormato.setText("");
+		txtIdioma.setText("");
+		cbEstaDisponible.setSelectedIndex(0);
+	}
+
+}
