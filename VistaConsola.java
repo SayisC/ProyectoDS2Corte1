@@ -1,4 +1,4 @@
-package co.edu.unbosque.view;
+.package co.edu.unbosque.view;
 import java.util.Scanner;
 public class Consola {
 
