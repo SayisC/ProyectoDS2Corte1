@@ -5,9 +5,7 @@ public class DocumentoPrimario extends Publicacion {
 	private String estadoConservacion;
 	private String origen;
 	
-	
-	
-	
+
 	public DocumentoPrimario() {
 		super();
 	}
