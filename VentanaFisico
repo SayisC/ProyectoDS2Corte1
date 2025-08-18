@@ -1,0 +1,130 @@
+package co.edu.unbosque.view;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class VentanaFisico extends JFrame {
+
+	private JLabel fondoFisico;
+	private JButton crear;
+	private JButton actualizar;
+	private JButton eliminar;
+	private JButton mostrar;
+	private JButton volver;
+
+	public VentanaFisico() {
+		inicializarComponentes();
+	}
+
+	public void inicializarComponentes() {
+
+		this.setBounds(10, 10, 1280, 720);
+		this.setTitle("Opciones Físicas");
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setLayout(null);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+
+		ImageIcon fondo = new ImageIcon("src/co/edu/unbosque/view/MenuFisico.PNG");
+		Image escalar = fondo.getImage().getScaledInstance(1280, 720, Image.SCALE_SMOOTH);
+		fondoFisico = new JLabel(new ImageIcon(escalar));
+		fondoFisico.setBounds(0, 0, 1280, 720);
+		this.add(fondoFisico);
+
+		crear = new JButton("Crear");
+		crear.setFont(new Font("Nunito", Font.BOLD, 20));
+		crear.setBounds(150, 93, 200, 40);
+		crear.setBackground(new Color(251, 197, 101));
+		crear.setForeground(Color.WHITE);
+		crear.setFocusPainted(false);
+		fondoFisico.add(crear);
+
+		actualizar = new JButton("Actualizar");
+		actualizar.setFont(new Font("Nunito", Font.BOLD, 20));
+		actualizar.setBounds(150, 220, 200, 40);
+		actualizar.setBackground(new Color(251, 197, 101));
+		actualizar.setForeground(Color.WHITE);
+		actualizar.setFocusPainted(false);
+		fondoFisico.add(actualizar);
+		
+		mostrar = new JButton("Mostrar");
+		mostrar.setFont(new Font("Nunito", Font.BOLD, 20));
+		mostrar.setBounds(150, 337, 200, 40);
+		mostrar.setBackground(new Color(251, 197, 101));
+		mostrar.setForeground(Color.WHITE);
+		mostrar.setFocusPainted(false);
+		fondoFisico.add(mostrar);
+
+		eliminar = new JButton("Eliminar");
+		eliminar.setFont(new Font("Nunito", Font.BOLD, 20));
+		eliminar.setBounds(150,470, 200, 40);
+		eliminar.setBackground(new Color(251, 197, 101));
+		eliminar.setForeground(Color.WHITE);
+		eliminar.setFocusPainted(false);
+		fondoFisico.add(eliminar);
+
+		volver = new JButton("Volver");
+		volver.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		volver.setBounds(20, 600, 150, 40);
+		volver.setBackground(new Color(173, 173, 173));
+		volver.setForeground(Color.WHITE);
+		volver.setFocusPainted(false);
+		fondoFisico.add(volver);
+
+	}
+
+	public JLabel getFondoFisico() {
+		return fondoFisico;
+	}
+
+	public void setFondoFisico(JLabel fondoFisico) {
+		this.fondoFisico = fondoFisico;
+	}
+
+	public JButton getCrear() {
+		return crear;
+	}
+
+	public void setCrear(JButton crear) {
+		this.crear = crear;
+	}
+
+	public JButton getActualizar() {
+		return actualizar;
+	}
+
+	public void setActualizar(JButton actualizar) {
+		this.actualizar = actualizar;
+	}
+
+	public JButton getEliminar() {
+		return eliminar;
+	}
+
+	public void setEliminar(JButton eliminar) {
+		this.eliminar = eliminar;
+	}
+
+	public JButton getMostrar() {
+		return mostrar;
+	}
+
+	public void setMostrar(JButton mostrar) {
+		this.mostrar = mostrar;
+	}
+
+	public JButton getVolver() {
+		return volver;
+	}
+
+	public void setVolver(JButton volver) {
+		this.volver = volver;
+	}
+
+}
