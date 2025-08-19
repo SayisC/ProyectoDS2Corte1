@@ -1,19 +1,20 @@
+/**
+ * Interfaz que define el comportamiento de los recursos electrónicos en la biblioteca.
+ * Todos los recursos electrónicos deben implementar esta interfaz.
+ */
 package co.edu.unbosque.model;
 
-public class RecursoElectronico extends Publicacion{
-	
-	public RecursoElectronico() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public RecursoElectronico(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
-			boolean estaDisponible) {
-		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
-	}
-
-	@Override
-	public String toString() {
-		return super.toString() + "RecursoElectronico ";
-	}
-	
+public interface RecursoElectronico {
+    
+    /**
+     * Constante que indica que el recurso está digitalizado.
+     */
+    public final boolean ESTA_DIGITAL = true;
+    
+    /**
+     * Método para acceder al recurso electrónico.
+     * @param estaDisponible Indica si el recurso está disponible para acceso por medio de url
+     * @return Mensaje con la información de acceso o denegación
+     */
+    public String acceder(boolean estaDisponible);
 }
