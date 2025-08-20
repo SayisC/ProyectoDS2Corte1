@@ -1,6 +1,3 @@
-Aquí está el código con el JavaDoc completo:
-
-```java
 package co.edu.unbosque.view;
 
 import java.util.Scanner;
