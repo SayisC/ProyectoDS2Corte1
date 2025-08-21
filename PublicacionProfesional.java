@@ -1,0 +1,45 @@
+public class PublicacionProfesional extends Publicacion{
+
+	// Atributo
+	private String introduccion;
+
+	public PublicacionProfesional() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public PublicacionProfesional(String introduccion) {
+		super();
+		this.introduccion = introduccion;
+	}
+
+
+	public PublicacionProfesional(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible, String introduccion) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
+		this.introduccion = introduccion;
+	}
+
+
+	public PublicacionProfesional(String titulo, String autor, String formato, String idioma, String fechaPublicacion,
+			boolean estaDisponible) {
+		super(titulo, autor, formato, idioma, fechaPublicacion, estaDisponible);
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getIntroduccion() {
+		return introduccion;
+	}
+
+
+	public void setIntroduccion(String introduccion) {
+		this.introduccion = introduccion;
+	}
+
+
+	@Override
+	public String toString() {
+		return super.toString() + "PublicacionProfesional [introduccion=" + introduccion + "]";
+	}
+}
