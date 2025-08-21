@@ -1,3 +1,5 @@
+package co.edu.unbosque.model;
+
 public class PublicacionProfesional extends Publicacion{
 
 	// Atributo
